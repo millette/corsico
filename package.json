@@ -1,0 +1,29 @@
+{
+  "name": "corsico",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": ["server.js"],
+  "license": "AGPL-3.0",
+  "scripts": {
+    "dev": "standard && node server",
+    "start": "NODE_ENV=production node server",
+    "lint": "standard",
+    "deps": "standard && dependency-check . && dependency-check . --unused --no-dev --ignore-module lodash"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "async-lru": "^1.1.1",
+    "got": "^8.3.0",
+    "koa": "^2.5.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-error": "millette/error#original-error",
+    "koa-etag": "^3.0.0",
+    "koa-logger": "^3.2.0",
+    "kompression": "^1.0.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "dependency-check": "^3.1.0",
+    "standard": "^11.0.1"
+  }
+}
