@@ -5,11 +5,15 @@
   "bin": [
     "server.js"
   ],
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "license": "AGPL-3.0",
   "scripts": {
     "dev": "standard && lodash template='templates/*.html' exports=node --development && node server",
     "start": "NODE_ENV=production node server",
-    "templates": "lodash template='templates/*.html' exports=node --development",
+    "build": "lodash template='templates/*.html' exports=node --development",
+    "now": "now --public --npm",
     "lint": "standard",
     "deps": "standard && dependency-check . && dependency-check . --unused --no-dev --ignore-module lodash"
   },
