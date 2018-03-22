@@ -43,6 +43,7 @@ const router = ({ supported, limit }) => {
   const baseUrl = new URL(supported)
   return (ctx) => {
     const url = ctx.URL
+    ctx.assert(url.pathname !== '/favicon.ico', 404)
     const proxiedUrl = url.pathname.slice(1)
     ctx.assert(proxiedUrl === supported, 501, 'Nope', { url: ctx.url, supported })
     const search = url.searchParams
