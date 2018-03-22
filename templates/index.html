@@ -1,0 +1,13 @@
+<%= ctx.html._top({ title: 'Corsico' }) %>
+
+<h2>Cors caching proxy</h2>
+
+<ul>
+<li>Supported endpoint: <%- supported %></li>
+<li>You can pass any query</li>
+<li><code>limit</code> has a maximum of 10,000, even if not specified</li>
+<li>Usage: <a href="<%- root %><%- supported %>"><%- root %><%- supported %></a></li>
+<li>Example: <a href="<%- root %><%- supported %>?reduce=false&limit=50"><%- root %><%- supported %>?reduce=false&limit=50</a></li>
+</ul>
+
+<%= ctx.html._bottom() %>

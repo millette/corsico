@@ -9,6 +9,7 @@ serve({
   maxAge: 86400000,
   max: 5000,
   limit: 10000,
-  template: 'error.html',
+  template: 'templates/error.html',
+  partials: {},
   port: 3300
 })

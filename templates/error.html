@@ -1,0 +1,23 @@
+<%= ctx.html._top({ title: 'Error - ' + status }) %>
+    <div id="error">
+    <p>Looks like something broke!</p>
+      <h2>Message:</h2>
+      <pre>
+        <code>
+<%- error %>
+        </code>
+      </pre>
+      <% if ((typeof originalError === 'object') && originalError.supported)  { %>
+        <h2>Supported: </h2>
+        <p><%- originalError.supported %></p>
+      <% } %>
+    <% if (env === 'development') { %>
+      <h2>Stack:</h2>
+      <pre>
+        <code>
+<%- stack %>
+        </code>
+      </pre>
+    <% } %>
+    </div>
+<%= ctx.html._bottom() %>
