@@ -44,6 +44,7 @@ const brotliFirst = () => (ctx, next) => {
 // route handler
 const router = ({ supported, limit }) => {
   const help = (ctx) => {
+    // FIXME: why would this return http instead of https?
     const root = new URL(ctx.URL)
     root.search = ''
     return html.index({ root, supported, ctx })
